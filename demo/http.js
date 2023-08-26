@@ -6,5 +6,5 @@ var staticBasePath = './demo';
 var app = express()
  
 app.use(serveStatic(staticBasePath))
-app.listen(8080)
-console.log('Listening on port 8080');
+app.listen(8000)
+console.log('http://localhost/8000');
