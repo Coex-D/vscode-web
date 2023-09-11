@@ -2,7 +2,9 @@
   "name": "vscode-web",
   "version": "1.81.0",
   "description": "Visual Studio Code for browser",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "node build.js",
     "prepare-demo": "node prepare-demo.js",
@@ -19,6 +21,9 @@
   },
   "homepage": "https://github.com/Felx-B/vscode-web#readme",
   "devDependencies": {
+    "@babel/cli": "^7.22.15",
+    "@babel/core": "^7.22.17",
+    "@babel/preset-env": "^7.22.15",
     "express": "^4.17.1",
     "fs-extra": "^9.0.1"
   },

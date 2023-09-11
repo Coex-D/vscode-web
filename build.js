@@ -6,9 +6,12 @@ const fse = require("fs-extra");
 const vscodeVersion = "1.81.0";
 
 if (!fs.existsSync("vscode")) {
-  child_process.execSync(`git clone --depth 1 https://github.com/microsoft/vscode.git -b ${vscodeVersion}`, {
-    stdio: "inherit",
-  });
+  child_process.execSync(
+    `git clone --depth 1 https://github.com/microsoft/vscode.git -b ${vscodeVersion}`,
+    {
+      stdio: "inherit",
+    }
+  );
 }
 process.chdir("vscode");
 
@@ -30,5 +33,3 @@ if (fs.existsSync("../dist")) {
 }
 fs.mkdirSync("../dist");
 fse.copySync("../vscode-web", "../dist");
-
-
